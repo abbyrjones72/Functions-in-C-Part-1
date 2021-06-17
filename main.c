@@ -32,8 +32,7 @@ int main(void)
 int get_data()
 {
   int number;
-  printf("Enter a number to square:\n");
-  printf("We will decrement the numbers and also provide their squares.\n");
+  printf("Enter a number series (number..0) to square:\n");
   /* look up scanf() using man 3 scanf if using linux */
   scanf("%d", &number);
   return number;
