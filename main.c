@@ -34,7 +34,7 @@ int get_data()
   int number;
   printf("Enter a number to square:\n");
 
-  /* look up scanf() using man 3 scanf
+  /* look up scanf() using man 3 scanf if using linux
   scanf("%d", &number);
   return number;
 }
