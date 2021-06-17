@@ -8,9 +8,9 @@
 */
 
 /* prototype the three functions */
-int square_this(int);
+int square_this(int number);
 int get_data();
-void display_result();
+void display_result(int number);
 
 int main(void) 
 {
@@ -24,7 +24,7 @@ int main(void)
 
   /* because display_result() takes two ints, and we have those
      defined above, we can use them as parameters */
-  display_result(num, squared_number);
+  display_result(num);
   return 0;
 }
 
@@ -40,18 +40,28 @@ int get_data()
 }
 
 /* function to perform exponential calculation */
+/* lets make this a bit more dynamic */
 int square_this(int number)
 {
-  /* simply returning number * number prevents any unneccesary
-     memory allocations using variables */
+  /* 
+     simply returning number * number prevents any unneccesary
+     memory allocations using variables
+  */
   return number * number;
 }
 
 /* function to display the result */
-void display_result(int number, int func)
+void display_result(int number)
 {
-  /* here, we are passing in an int and a function. we are
+  /* 
+     here, we are passing in an int and a function. we are
      allowed to do this because the function we are passing 
-     in returns an int */
-  printf("%d squared is %d\n", number, square_this(number));
+     in returns an int
+  */
+  while(number > 0)
+  {
+    int value = square_this(number);
+    printf("%d squared is: %d\n", number, value);
+    number--;
+  }
 }
