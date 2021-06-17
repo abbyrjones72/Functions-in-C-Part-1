@@ -53,11 +53,6 @@ int square_this(int number)
 /* function to display the result */
 void display_result(int number)
 {
-  /* 
-     here, we are passing in an int and a function. we are
-     allowed to do this because the function we are passing 
-     in returns an int
-  */
   while(number > 0)
   {
     /* because we prototyped square_this(), we can access it anywhere
