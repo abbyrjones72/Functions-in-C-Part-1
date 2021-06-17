@@ -8,9 +8,9 @@
 */
 
 /* prototype the three functions */
-int square_this(int number);
+int square_this(int);
 int get_data();
-void display_result(int number);
+void display_result(int);
 
 int main(void) 
 {
@@ -33,7 +33,7 @@ int get_data()
 {
   int number;
   printf("Enter a number to square:\n");
-  printf("We will decrement the numbers and also provide their squares.");
+  printf("We will decrement the numbers and also provide their squares.\n");
   /* look up scanf() using man 3 scanf if using linux */
   scanf("%d", &number);
   return number;
@@ -53,11 +53,12 @@ int square_this(int number)
 /* function to display the result */
 void display_result(int number)
 {
+  int value; 
   while(number > 0)
   {
     /* because we prototyped square_this(), we can access it anywhere
        in the program and inside any function */
-    int value = square_this(number);
+    value = square_this(number);
     printf("%d squared is: %d\n", number, value);
     number--;
   }
