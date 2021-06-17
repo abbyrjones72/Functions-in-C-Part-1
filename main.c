@@ -33,7 +33,7 @@ int get_data()
 {
   int number;
   printf("Enter a number to square:\n");
-
+  printf("We will decrement the numbers and also provide their squares.");
   /* look up scanf() using man 3 scanf if using linux */
   scanf("%d", &number);
   return number;
