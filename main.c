@@ -60,6 +60,8 @@ void display_result(int number)
   */
   while(number > 0)
   {
+    /* because we prototyped square_this(), we can access it anywhere
+       in the program and inside any function */
     int value = square_this(number);
     printf("%d squared is: %d\n", number, value);
     number--;
